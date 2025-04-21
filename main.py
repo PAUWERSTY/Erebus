@@ -1,4 +1,3 @@
-# main.py (Versión Completa para API FastAPI con Branding)
 
 import os
 import re
@@ -299,4 +298,4 @@ if __name__ == "__main__":
     print("   Usa Postman, curl o tu frontend React para enviar un archivo de audio")
     print(f"   a POST http://127.0.0.1:8000/process_audio/")
     print("-" * 50)
-    uvicorn.run("Erebus:app", host="0.0.0.0", port=8000, reload=False)
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=False)
