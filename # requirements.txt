@@ -1,0 +1,10 @@
+# requirements.txt
+fastapi
+uvicorn[standard] # Servidor ASGI
+python-dotenv
+google-generativeai
+openai-whisper # O la librería Whisper que uses
+edge-tts
+# numpy # Whisper puede necesitarlo
+# No incluir: playsound, sounddevice, keyboard, scipy (si solo se usó para write)
+# Incluir si usaste shutil o uuid (son estándar, pero por si acaso)
