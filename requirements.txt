@@ -1,17 +1,18 @@
 # ----------------------------------------------------
 # Requerimientos de Python para la API E.R.E.B.U.S.
 # ----------------------------------------------------
-# Usa: pip install -r requirements.txt
+# Instalar dependencias con: pip install -r requirements.txt
 # ----------------------------------------------------
 
 # --- Core Web Framework & Server ---
 fastapi>=0.100.0             # Framework web moderno y rápido para construir la API.
-uvicorn[standard]>=0.20.0    # Servidor ASGI para ejecutar FastAPI. '[standard]' incluye extras útiles como websockets y httptools.
+uvicorn[standard]>=0.20.0    # Servidor ASGI para ejecutar FastAPI. '[standard]' incluye extras útiles.
+python-multipart>=0.0.5    # Necesario para que FastAPI pueda parsear datos de formularios multipart (carga de archivos).
 
 # --- AI & Machine Learning ---
 google-generativeai>=0.4.0  # Librería oficial para interactuar con Google Gemini API.
 openai-whisper>=20231117    # Librería para la transcripción de audio (Speech-to-Text).
-                            # NOTA: Instalará 'torch' como dependencia, que es grande.
+                            # NOTA: Instalará 'torch' (PyTorch) como dependencia, que es grande.
 
 # --- Text-to-Speech ---
 edge-tts>=6.1.8             # Librería para usar las voces neuronales de alta calidad de Microsoft Edge (API no oficial).
@@ -29,6 +30,8 @@ numpy>=1.24.0               # Librería fundamental para computación numérica,
 # starlette>=0.27.0           # El microframework ASGI sobre el que se construye FastAPI.
 # torch>=2.0                # Requerido por openai-whisper para las redes neuronales. ¡Dependencia GRANDE!
 # aiohttp>=3.8              # A menudo usado por edge-tts para comunicaciones asíncronas HTTP.
+# websockets>=11.0          # Incluido por uvicorn[standard], para soporte WebSocket.
+# httptools>=0.5            # Incluido por uvicorn[standard], parser HTTP rápido.
 # grpcio>=1.50              # Usado por google-generativeai para la comunicación con la API de Google.
 
 # ----------------------------------------------------
